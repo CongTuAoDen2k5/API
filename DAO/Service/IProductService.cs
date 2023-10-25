@@ -3,18 +3,22 @@ using DAO.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Linq.Expressions;
 
 namespace DAO.Service
 {
     public interface IProductService
     {
         IEnumerable<ProductVM> GetAll();
-        IEnumerable<ProductVM> GetAll(int limit, int offSet);
+
+        IEnumerable<ProductVM> GetAll(int limt, int offSet, Expression<Func<Product, bool>> filter = null, Func<IQueryable<Product>, IOrderedQueryable<Product>> orderBy = null);
+
         ProductVM GetById(int id);
+
         void Add(Product p);
+
         void Update(Product p);
+
         void Delete(int id);
     }
 }

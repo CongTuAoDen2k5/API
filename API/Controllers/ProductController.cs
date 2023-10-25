@@ -17,6 +17,7 @@ namespace API.Controllers
             _productService = productService;
         }
 
+        [Route("Get")]
         [HttpGet]
         public IEnumerable<ProductVM> GetProducts()
         {
