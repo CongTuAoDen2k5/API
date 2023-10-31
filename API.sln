@@ -5,7 +5,9 @@ VisualStudioVersion = 17.7.34009.444
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API", "API\API.csproj", "{4CCA0809-D8EA-4EAE-A68E-11256D7B845E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAO", "DAO\DAO.csproj", "{8B946100-1611-410D-BD69-650ABD94FE48}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DAO", "DAO\DAO.csproj", "{8B946100-1611-410D-BD69-650ABD94FE48}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC", "MVC\MVC.csproj", "{9BCE74D4-FE9A-47AC-ADBC-49EE3CD91611}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{8B946100-1611-410D-BD69-650ABD94FE48}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B946100-1611-410D-BD69-650ABD94FE48}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B946100-1611-410D-BD69-650ABD94FE48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BCE74D4-FE9A-47AC-ADBC-49EE3CD91611}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BCE74D4-FE9A-47AC-ADBC-49EE3CD91611}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BCE74D4-FE9A-47AC-ADBC-49EE3CD91611}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BCE74D4-FE9A-47AC-ADBC-49EE3CD91611}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

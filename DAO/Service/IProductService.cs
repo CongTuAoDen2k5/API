@@ -11,7 +11,7 @@ namespace DAO.Service
     {
         IEnumerable<ProductVM> GetAll();
 
-        IEnumerable<ProductVM> GetAll(int limt, int offSet, Expression<Func<Product, bool>> filter = null, Func<IQueryable<Product>, IOrderedQueryable<Product>> orderBy = null);
+        IEnumerable<ProductVM> GetAll(int? limt = null, int? offSet = null, Expression<Func<Product, bool>> filter = null, Func<IQueryable<Product>, IOrderedQueryable<Product>> orderBy = null);
 
         ProductVM GetById(int id);
 

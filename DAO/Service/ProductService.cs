@@ -37,9 +37,20 @@ namespace DAO.Service
             return productsVMs;
         }
 
-        public IEnumerable<ProductVM> GetAll(int limit, int offSet, Expression<Func<Product, bool>> filter = null, Func<IQueryable<Product>, IOrderedQueryable<Product>> orderBy = null)
+        public IEnumerable<ProductVM> GetAll(int? limit = null, int? offSet = null, Expression<Func<Product, bool>> filter = null, Func<IQueryable<Product>, IOrderedQueryable<Product>> orderBy = null)
         {
-            var products = u.ProductRepository.Get(filter, orderBy, "Brand,Category,Unit").Take(limit).Skip(offSet);
+            var products = u.ProductRepository.Get(filter, orderBy, "Brand,Category,Unit");
+
+            if(limit != null)
+            {
+                products = products.Take(limit.Value);
+            }
+
+            if (offSet != null)
+            {
+                products = products.Skip(offSet.Value);
+            }
+
             var productsVMs = new List<ProductVM>();
             foreach (var product in products)
             {
@@ -71,7 +82,7 @@ namespace DAO.Service
                 Discription = product.Discription,
                 Quantity = product.Quantity,
                 Price = product.Price,
-                ImageUrl = product.ImageUrl,
+                  = product.ImageUrl,
                 CreateAt = product.CreateAt,
                 BrandName = product.Brand.Name,
                 CategoryName = product.Category.Name,
